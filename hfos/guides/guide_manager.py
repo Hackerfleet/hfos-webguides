@@ -33,11 +33,11 @@ Imports harbour & sailing guides from the web and keeps them up to date.
 import os
 import json
 
-from hfos.component import ConfigurableComponent, handler
-from hfos.database import objectmodels, instance
-from hfos.logger import verbose, debug, error, warn, critical, events, hilight
-from hfos.events.system import authorizedevent
-from hfos.misc import std_uuid
+from isomer.component import ConfigurableComponent, handler
+from isomer.database import objectmodels, instance
+from isomer.logger import verbose, debug, error, warn, critical, events, hilight
+from isomer.events.system import authorized_event
+from isomer.misc import std_uuid
 from urllib import request
 
 try:
@@ -46,12 +46,12 @@ except ImportError:
     from subprocess32 import Popen  # NOQA
 
 
-class update_guide(authorizedevent):
+class update_guide(authorized_event):
     """Triggers an update of specified web guides"""
     pass
 
 
-class update_all(authorizedevent):
+class update_all(authorized_event):
     """Triggers an update of all web guides"""
     pass
 
@@ -61,7 +61,7 @@ class GuideManager(ConfigurableComponent):
     Manager for web guides, like skipperguide
     """
 
-    channel = "hfosweb"
+    channel = 'isomer-web'
 
     configprops = {}
     configform = [

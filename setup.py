@@ -44,7 +44,7 @@ This software package is a plugin module for HFOS.
       install_requires=[
           'hfos>=1.2.0'
       ],
-      entry_points="""[hfos.components]
+      entry_points="""[isomer.components]
     guides=hfos.guides.guide_manager:GuideManager
     """,
       test_suite="tests.main.main",
