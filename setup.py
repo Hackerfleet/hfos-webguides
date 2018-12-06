@@ -42,7 +42,7 @@ This software package is a plugin module for HFOS.
 """,
       dependency_links=[],
       install_requires=[
-          'hfos>=1.2.0'
+          'isomer>=1.0.0'
       ],
       entry_points="""[isomer.components]
     guides=hfos.guides.guide_manager:GuideManager

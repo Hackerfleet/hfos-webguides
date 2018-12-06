@@ -1,4 +1,4 @@
-HFOS - Heroic
+Isomer - Heroic
 =============
 
 This module provides additional functionality for user profile enhancement:
