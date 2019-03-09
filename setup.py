@@ -58,7 +58,7 @@ This software package is a plugin module for HFOS.
 """,
     dependency_links=[],
     install_requires=[
-        'isomer>=1.0.0'
+        'isomer>=1.0'
     ],
     entry_points="""[isomer.components]
     guides=isomer.guides.guide_manager:GuideManager
